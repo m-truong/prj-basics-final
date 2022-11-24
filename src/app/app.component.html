@@ -1,0 +1,10 @@
+<!-- Based on user-click interaction ; then bind some sort of Angular EventEmitter to the App.TS -->
+<app-header (recipesIsSelected)="handleNavbarSelected($event)" (shoppingListIsSelected)="handleNavbarSelected($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="displayRecipes"></app-recipes>
+      <app-shopping-list *ngIf="displayShoppingList"></app-shopping-list>
+    </div>
+  </div>
+</div>
